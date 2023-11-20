@@ -1,21 +1,16 @@
-package meupacote;
+package txtatv;
 
-// 2MD
-
-// Alunos
-// Aline Bianca Arantes da Silva - 01617756
-// Emerson Wallace Barcelos de Araújo - 01609132
-// Maria karolina Rodrigues de Andrade - 01631286
-// Maria Luiza da Silva Monteiro - 01622438
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import txtatv.Regpro;
+
 public class Leituraquiv {
 	public static void main(String[] args) {
 		// Especifique o caminho para o arquivo de texto
-		String caminhoArquivo = "C:\\temp\\produto.txt";
+		
 
 		int codigo = 0;
 		String nome;
@@ -24,10 +19,9 @@ public class Leituraquiv {
 		int qtd = 0;
 		int categoria = 0;
 		double total = 0;
-		int qtd1 = 0; // essa porra aqui é oq?
 		try {
 			// Crie um objeto File para representar o arquivo
-			File arquivo = new File(caminhoArquivo);
+			File arquivo = new File(Regpro.getCaminhoArquivo());
 			// Crie um objeto Scanner para ler o conteúdo do arquivo
 			Scanner leitor = new Scanner(arquivo);
 			// Use um loop para ler e imprimir cada linha do arquivo
@@ -40,14 +34,14 @@ public class Leituraquiv {
 				valor = valor / 100;
 				qtd = Integer.parseInt(linha.substring(43, 45));
 				categoria = Integer.parseInt(linha.substring(46, 47));
-				System.out.println(codigo + " - " + nome);
+				System.out.println(codigo + " - " + nome + " - " + valor + " - " + qtd + " - " + categoria);
 				total = total + (valor * qtd);
 			}
 			System.out.println("O total foi: " + total);
 			// Feche o Scanner após a leitura do arquivo
 			leitor.close();
 		} catch (FileNotFoundException e) {
-			System.out.println("Arquivo não encontrado: " + caminhoArquivo);
+			System.out.println("Arquivo não encontrado: " + Regpro.getCaminhoArquivo());
 		}
 	}
 }
