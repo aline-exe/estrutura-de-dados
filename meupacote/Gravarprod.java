@@ -47,7 +47,7 @@ public class Gravarprod {
             System.out.println();
         }
          } catch (FileNotFoundException e) {
-        System.out.println("Arquivo nâo encontrado caralho.");
+        System.out.println("Arquivo nâo encontrado meu amor, procura dnv ai.");
         }
     }
 
