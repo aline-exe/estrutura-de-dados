@@ -5,6 +5,12 @@ import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 
+// Alunos e Matriculas: 
+// Aline Bianca Arantes da Silva - 01617756 ^^
+// Emerson Wallace Barcelos de Araújo - 01609132 :)
+// Maria Karolina Rodrigues De Andrade - 01631286
+// Maria Luiza da Silva Monteiro- 01622438
+
 public class Gravarprod {
     public static void main(String[] args) {
         // Crie um ArrayList para armazenar objetos Regpro
