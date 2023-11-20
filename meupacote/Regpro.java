@@ -1,16 +1,49 @@
-package meupacote;
+package txtatv;
 
 public class Regpro {
+    
     private int codigo;
     private String descricao;
     private double preco;
     private int qtd;
+    private int categoria;
+    private String linha;
+    static private String caminhoArquivo = "C:\\temp\\Produto.txt";
+    
+    public String getLinha() {
+        return linha;
+    }
 
-    public Regpro(int codigo, String descricao, double preco, int qtd) {
+    public void setLinha(String linha) {
+        this.linha = linha;
+    }
+
+   
+    
+    public static String getCaminhoArquivo() {
+        return caminhoArquivo;
+    }
+
+    public static void setCaminhoArquivo(String caminhoArquivo) {
+        Regpro.caminhoArquivo = caminhoArquivo;
+    }
+
+
+
+    public int getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
+
+    public Regpro(int codigo, String descricao, double preco, int qtd, int categoria) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.preco = preco;
         this.qtd = qtd;
+        this.categoria = categoria;
     }
 
     public int getCodigo() {
